@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (username === 'sandra' && password === 'sigma') {
             playSound('wow-sound-effect.mp3');
             alert('WOOOOW YOU GOT IT RIGHT! Ojala te gusta!');
-            window.location.href = 'index.html'; // Redirect to the main content page
+            window.location.href = 'index1.html'; // Redirect to the main content page
         } else {
             alert('Incorrect input. Think');
         }
