@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Juicy page</title> <!--Dispalays on URL-->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+          background-image: url('Professional Juza.png'), url('Ice cream Juza.jpeg'), url('Smirk Juza.jpeg');
+          background-size: 30%, 35%, 40% 78%; /* Make sure the image covers the entire background W,H */
+          background-repeat: no-repeat; /* Prevent the image from repeating */
+          background-position: left, right, center; /* Center the image */
+
+            position: relative; /* Ensure it stays in place */
+            z-index: -1; /* Place the background behind other content */
+        }
+        .content {
+            position: relative; /* Keep other content above the background image */
+            z-index: 1; /* Ensure this content is above the background */
+      }
+    </style>
+</head>
+<body>
+  <div class="banner">FELIZ NAVIDAD JUZALETH!!!</div>
+  <div class="scene">
+    <div class="tree">
+      <div class="star">
+      </div>
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer3"></div>
+      <div class="lights1">
+      <div class="lights2"></div>
+      <div class="lights3"></div>
+      <div class="lights4"></div>
+      <div class="lights5"></div>
+      <div class="lights6"></div>
+      <div class="lights6"></div>
+      <div class="lights7"></div>
+      <div class="lights8"></div>
+      <div class="lights9"></div>
+      <div class="lights10"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+    </div>
+    <div class="rose">
+        <div class="stem"></div>
+        <div class="center"></div>
+        <div class="petal" id="petal1"></div>
+        <div class="petal" id="petal2"></div>
+        <div class="petal" id="petal3"></div>
+        <div class="petal" id="petal4"></div>
+        <div class="petal" id="petal5"></div>
+        <div class="petal" id="petal6"></div>
+    </div>
+    <div id="heart-container"></div> <!-- Container for heart animation -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
