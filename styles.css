@@ -1,0 +1,415 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #242121;
+}
+
+.scene {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 600px;
+    height: 500px;
+}
+
+/* TREE CODE BEGINNING */
+
+.tree {
+    position: absolute;
+    top: 70%; /* adjust position of tree, y-axis */
+    left: 30%;
+    width: 0;
+    height: 0;
+}
+
+.layer {
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    position: absolute;
+}
+
+.layer1 {   /* Top Tree*/
+    border-bottom: 180px solid green;
+    top: 100px;
+    left: -70px;
+}
+
+.layer2 {   /* Middle Tree*/
+    border-bottom: 180px solid green;
+    top: 50px;
+    left: -70px;
+}
+
+.layer3 {   /* Top Tree*/
+    border-bottom: 180px solid green;
+    top: 0;
+    left: -70px;
+}
+
+/*STAR*/
+
+.star {
+    position: absolute;
+    top: -20px;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 30px solid yellow;
+    animation: blink .7s infinite;
+}
+
+.star::before, .star::after {  /* The 5-point star */
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid yellow;
+}
+
+.star::before {
+    transform: rotate(-63deg);
+}
+
+.star::after {
+    transform: rotate(65deg); /* Rotate to form the star */
+}
+
+.lights1 { /*Top light*/
+    top: 50px; /* THE HIGHER THE INTEGER THE LOWER IT DISPLAYS*/
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 10s infinite;
+}
+
+.lights2 {
+    top: 35px; /* THE HIGHER THE INTEGER THE LOWER IT DISPLAYS*/
+    left: -1px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 9s infinite;
+}
+
+.lights3 {
+    top: 70px; /* TOP RIGHT*/
+    left: 15px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 8s infinite;
+}
+
+.lights4 {
+    top: 70px; /* TOP LEFT*/
+    left: -15px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 7s infinite;
+}
+
+
+.lights5 {
+    top: 110px; /* LEFT UPPER MIDDLE*/
+    left: -45px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 6s infinite;
+}
+
+.lights6 {
+    top: 110px; /* RIGHT UPPER MIDDLE*/
+    left: 45px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 5s infinite;
+}
+
+.lights7 {
+    top: 150px; /* LEft MIDDLE*/
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 4s infinite;
+}
+
+.lights8 {
+    top: 150px; /* RIGHT MIDDLE*/
+    left: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 3s infinite;
+}
+
+.lights9 {
+    top: 200px; /* BOTTOM*/
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 2s infinite;
+}
+
+.lights10 {
+    top: 200px; /* BOTTOM LEFT */
+    left: -40px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: flash-colors 1s infinite;
+}
+
+
+
+
+
+@keyframes flash-colors {
+    0%, 100% { background-color: red; }
+    25% { background-color: yellow; }
+    50% { background-color: white;}
+    75% { background-color: blue;}
+}
+
+.light:nth-child(1) { top: 80px; left: 20px; }
+.light:nth-child(2) { top: 100px; left: 60px; }
+.light:nth-child(3) { top: 140px; left: 40px; }
+.light:nth-child(4) { top: 160px; left: 80px; }
+.light:nth-child(5) { top: 200px; left: 20px; }
+.light:nth-child(6) { top: 220px; left: 60px; }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes twinkle {
+    0%, 100% { background-color: red; }
+    25% { background-color: pink; }
+    50% { background-color: goldenrod;}
+    75% { background-color: green;}
+    90% { background-color:white;}
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes grow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes bloom {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(.1); opacity: 0.5; }
+}
+
+/* TREE CODE END
+FLOWER CODE BEGIN */
+.rose {
+    position: absolute;
+    width: 200px;
+    height: 600px;
+    top: 43%;
+    animation: bloom 3s ease-in-out forwards;
+}
+
+.stem {
+    position: absolute;
+    width: 30px;
+    height: 300px;
+    background-color: green;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.center {
+    position: absolute;
+    width: 90px; /* H & W changes the shape */
+    height: 90px;
+    background-color: yellow;
+    border-radius: 60%;
+    top: 230px;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1; /*Bleeds thru*/
+}
+
+.petal {
+    position: absolute;
+    width: 80px;
+    height: 180px;
+    background-color: crimson;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    opacity: 0;
+}
+
+#petal1 { transform: rotate(0deg); top: 50px; left: 70px; }
+#petal2 { transform: rotate(60deg); top: 50px; left: 70px; }
+#petal3 { transform: rotate(120deg); top: 50px; left: 70px; }
+#petal4 { transform: rotate(180deg); top: 50px; left: 70px; }
+#petal5 { transform: rotate(240deg); top: 50px; left: 70px; }
+#petal6 { transform: rotate(300deg); top: 50px; left: 70px; }
+
+/* BANNER ON TOP OF PAGE*/
+.banner {
+    width: 100%;
+    text-align: center;
+    animation: twinkle 5s infinite;
+    background-color: pink;
+    color: black;
+    padding: 20px 0;
+    font-size: 4em;
+    position: fixed; /*keeps banner on top when scrolling */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the banner system stays on tp of other elements*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
+
+/* Heart container styling */
+#heart-container {
+    position: absolute;
+    left: 70%; /* Adjust as needed */
+    top: 75%; /* Vertically center */
+    transform: translateY(-50%);
+    background-color: rgba(36, 33, 33, 0.0); /* Adjust the last value to set transparency */
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.heart-point {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: fuchsia;
+    border-radius: 50%;
+}
+
+.small-heart-point {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
+}
+
+
+/* LOGIN CSS*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    cursor: grab;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center ;
+    margin-bottom: 20px;
+    font-size: 95%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+    animation: flash-colors2 .5s infinite; /* See below for colors of button */
+}
+
+@keyframes flash-colors2 { 
+    50% { background-color: red; }
+    50% { background-color: green;}
+}
